@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{31DD5543-FA84-4C35-8F53-117FDE891463}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gds.LiteConstruct.PrimitivesManagement</RootNamespace>
+    <AssemblyName>Gds.LiteConstruct.PrimitivesManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AxisBindings\Binder.cs" />
+    <Compile Include="AxisBindings\AxisBindingManager.cs" />
+    <Compile Include="AxisBindings\BindingAxisControllerManagement\AssociatedBindingAxisController.cs" />
+    <Compile Include="AxisBindings\BindingAxisControllerManagement\FreeBindingAxisController.cs" />
+    <Compile Include="AxisBindings\Interfaces\IConnectorInterfaceSide.cs" />
+    <Compile Include="AxisBindings\Interfaces\IManagerPresenter.cs" />
+    <Compile Include="AxisBindings\UserInterfaceController.cs" />
+    <Compile Include="AxisBindings\ManagerToInterfaceConnector.cs" />
+    <Compile Include="..\GeneralAssemblyInfo.cs">
+      <Link>Properties\GeneralAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AxisBindings\BindingAxisControllerManagement\BindingAxisController.cs" />
+    <Compile Include="AxisBindings\BindingAxisControllerManagement\IBindingAxisControllerPresenter.cs" />
+    <Compile Include="BindingsManager.cs" />
+    <Compile Include="AxisBindings\Interfaces\IUserInterfaceControllerPresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BindingAxis.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gds.LiteConstruct.BusinessObjects\Gds.LiteConstruct.BusinessObjects.csproj">
+      <Project>{6D2D9F6C-2081-421D-93C7-251C0C0440A0}</Project>
+      <Name>Gds.LiteConstruct.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gds.LiteConstruct.Environment\Gds.LiteConstruct.Environment.csproj">
+      <Project>{D62AE657-DE99-436F-9919-66045E2884B2}</Project>
+      <Name>Gds.LiteConstruct.Environment</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

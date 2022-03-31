@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D2D9F6C-2081-421D-93C7-251C0C0440A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gds.LiteConstruct.BusinessObjects</RootNamespace>
+    <AssemblyName>Gds.LiteConstruct.BusinessObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX">
+      <HintPath>..\..\Output\Microsoft.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3D">
+      <HintPath>..\..\Output\Microsoft.DirectX.Direct3D.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3DX">
+      <HintPath>..\..\Output\Microsoft.DirectX.Direct3DX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualC" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GeneralAssemblyInfo.cs">
+      <Link>Properties\GeneralAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Angle.cs" />
+    <Compile Include="Axises\Axis.cs" />
+    <Compile Include="Axises\AssociatedBindingAxis.cs" />
+    <Compile Include="Axises\FreeBindingAxis.cs" />
+    <Compile Include="Cone.cs" />
+    <Compile Include="Cylinder.cs" />
+    <Compile Include="Delegates.cs" />
+    <Compile Include="DeviceObject.cs" />
+    <Compile Include="GeometricalFigure.cs" />
+    <Compile Include="IMouseInteractable.cs" />
+    <Compile Include="IMovable.cs" />
+    <Compile Include="IRotationVectorLimitable.cs" />
+    <Compile Include="ISelectiveScalable.cs" />
+    <Compile Include="ITextureProvider.cs" />
+    <Compile Include="ITextureRotatable.cs" />
+    <Compile Include="Line2D.cs" />
+    <Compile Include="MouseRotationTranslation\GraphicManagers\BrightnessManager.cs" />
+    <Compile Include="MouseRotationTranslation\GraphicManagers\ColorF.cs" />
+    <Compile Include="MouseRotationTranslation\GraphicManagers\ColorManager.cs" />
+    <Compile Include="MouseRotationTranslation\GraphicManagers\Illuminator.cs" />
+    <Compile Include="MouseRotationTranslation\Interactors\ArrowMouseInteractor.cs" />
+    <Compile Include="MouseRotationTranslation\Interactors\CylinderMouseInteractor3D.cs" />
+    <Compile Include="MouseRotationTranslation\Interactors\CylindricalInteractor.cs" />
+    <Compile Include="MouseRotationTranslation\Interactors\MouseInteractor3D.cs" />
+    <Compile Include="MouseRotationTranslation\Interactors\RectangleMouseInteractor3D.cs" />
+    <Compile Include="MouseRotationTranslation\Interactors\RotationRingInteractor.cs" />
+    <Compile Include="MouseRotationTranslation\Interactors\TranslationPlaneInteractor.cs" />
+    <Compile Include="MouseRotationTranslation\Interfaces\IBillboard.cs" />
+    <Compile Include="MouseRotationTranslation\Interfaces\IConnectableToScalable.cs" />
+    <Compile Include="MouseRotationTranslation\Interfaces\IResizableVisitorPresenter.cs" />
+    <Compile Include="MouseRotationTranslation\Interfaces\ITransformationControllerPresenter.cs" />
+    <Compile Include="MouseRotationTranslation\Interfaces\ITranslationControllerPresenter.cs" />
+    <Compile Include="MouseRotationTranslation\MouseRotation.cs" />
+    <Compile Include="MouseRotationTranslation\MouseTranslation.cs" />
+    <Compile Include="MouseRotationTranslation\MouseTranslationByAxis.cs" />
+    <Compile Include="MouseRotationTranslation\MouseTranslationByPlane.cs" />
+    <Compile Include="MouseRotationTranslation\MouseTransformation.cs" />
+    <Compile Include="MouseRotationTranslation\ScaleManager.cs" />
+    <Compile Include="MouseRotationTranslation\TransformationControllers\BufferedTransformationController.cs" />
+    <Compile Include="MouseRotationTranslation\TransformationControllers\TransformationController.cs" />
+    <Compile Include="MouseRotationTranslation\ValueScroller.cs" />
+    <Compile Include="MouseRotationTranslation\GraphicManagers\TransparencyManager.cs" />
+    <Compile Include="MouseRotationTranslation\Interfaces\IApplyable.cs" />
+    <Compile Include="MouseRotationTranslation\Interactors\PrimitiveInteractor.cs" />
+    <Compile Include="MouseRotationTranslation\Interfaces\IActionable.cs" />
+    <Compile Include="MouseRotationTranslation\Interfaces\IColorable.cs" />
+    <Compile Include="MouseRotationTranslation\Interfaces\IConnectableToColorable.cs" />
+    <Compile Include="MouseRotationTranslation\Interfaces\IConnectableToTranspareable.cs" />
+    <Compile Include="MouseRotationTranslation\Interfaces\IScalable.cs" />
+    <Compile Include="MouseRotationTranslation\Interfaces\ITranspareable.cs" />
+    <Compile Include="MouseRotationTranslation\TransformationControllers\RotationController.cs" />
+    <Compile Include="MouseRotationTranslation\TransformationControllers\TranslationAxisController.cs" />
+    <Compile Include="MouseRotationTranslation\TransformationControllers\TranslationPlaneController.cs" />
+    <Compile Include="IMouseTransformationManagement.cs" />
+    <Compile Include="ObjectsBuffer.cs" />
+    <Compile Include="PointConverter.cs" />
+    <Compile Include="Primitives\ColumnData.cs" />
+    <Compile Include="Primitives\ColumnPrimitive.cs" />
+    <Compile Include="Primitives\DetailedHeightModeData.cs" />
+    <Compile Include="Primitives\DetailedLengthModeData.cs" />
+    <Compile Include="Primitives\DetailedModeData.cs" />
+    <Compile Include="Primitives\SimpleModeData.cs" />
+    <Compile Include="Primitives\StairsPrimitive.cs" />
+    <Compile Include="Primitives\WallTrianglePrimitive.cs" />
+    <Compile Include="ProjectionPlane.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Ray.cs" />
+    <Compile Include="MouseRotationTranslation\ResizableVisitor.cs" />
+    <Compile Include="RightTriangle.cs" />
+    <Compile Include="Rotation.cs" />
+    <Compile Include="AxisAngle.cs" />
+    <Compile Include="RotationVectorLimiter.cs" />
+    <Compile Include="Sides\ColumnBodySide.cs" />
+    <Compile Include="Sides\ColumnStubeSide.cs" />
+    <Compile Include="Sides\MasterSide.cs" />
+    <Compile Include="Sides\Side3Dimension.cs" />
+    <Compile Include="Sides\Side4Dimension.cs" />
+    <Compile Include="Sides\SideDimension.cs" />
+    <Compile Include="Sides\StairsLeftSide.cs" />
+    <Compile Include="Sides\StairsRightSide.cs" />
+    <Compile Include="Sides\StairsTopSide.cs" />
+    <Compile Include="Sides\StairsSide.cs" />
+    <Compile Include="Sides\SimpleSide.cs" />
+    <Compile Include="SizeTypes\IAdditionalVisitor.cs" />
+    <Compile Include="SizeTypes\IColumnExtendable.cs" />
+    <Compile Include="SizeTypes\IColumnSizeable.cs" />
+    <Compile Include="SizeTypes\ISizableVisitor.cs" />
+    <Compile Include="Primitives\PlaneTrianglePrimitive.cs" />
+    <Compile Include="Primitives\TrianglePrism.cs" />
+    <Compile Include="SizeTypes\IStairsApplyable.cs" />
+    <Compile Include="SizeTypes\IStairsConstraint.cs" />
+    <Compile Include="SizeTypes\IStairsExtendable.cs" />
+    <Compile Include="SizeTypes\IStairsSizable.cs" />
+    <Compile Include="SizeTypes\ITrianglePrismSizable.cs" />
+    <Compile Include="SizeTypes\IParallelepipedSizable.cs" />
+    <Compile Include="IRenderable.cs" />
+    <Compile Include="IRotatable.cs" />
+    <Compile Include="Primitives\PlaneRectPrimitive.cs" />
+    <Compile Include="Primitives\Parallelepiped.cs" />
+    <Compile Include="SizeTypes\Size2.cs" />
+    <Compile Include="SizeTypes\Size3.cs" />
+    <Compile Include="SizeTypes\SizeBase.cs" />
+    <Compile Include="SizeTypes\Size4.cs" />
+    <Compile Include="Primitives\StairsData.cs" />
+    <Compile Include="TextureAllocation3.cs" />
+    <Compile Include="TextureAllocation4.cs" />
+    <Compile Include="TextureAllocation.cs" />
+    <Compile Include="SquareBillboard.cs" />
+    <Compile Include="TextureLoader.cs" />
+    <Compile Include="TextureRotator.cs" />
+    <Compile Include="TransformationSmoother.cs" />
+    <Compile Include="Triangle.cs" />
+    <Compile Include="ValuesComparer.cs" />
+    <Compile Include="Vector2Utils.cs" />
+    <Compile Include="Vector3Utils.cs" />
+    <Compile Include="Vertex.cs" />
+    <Compile Include="Primitives\PrimitiveBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RotationVector.cs" />
+    <Compile Include="Sides\Side3.cs" />
+    <Compile Include="Sides\SideBase.cs" />
+    <Compile Include="Sides\Side4.cs" />
+    <Compile Include="Primitives\WallRectPrimitive.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Interactor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Interactor_TPlane.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

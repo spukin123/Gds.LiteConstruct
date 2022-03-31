@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E02387FB-5004-4F89-8581-F6C4BFE0F99D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gds.LiteConstruct.Windows</RootNamespace>
+    <AssemblyName>Gds.LiteConstruct.Windows</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GeneralAssemblyInfo.cs">
+      <Link>Properties\GeneralAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Commands\Adapters\ButtonAdapter.cs" />
+    <Compile Include="Commands\Adapters\ButtonAdapterFactory.cs" />
+    <Compile Include="Commands\Adapters\CheckedItemAdapter.cs" />
+    <Compile Include="Commands\Adapters\CheckedToolStripButtonAdapter.cs" />
+    <Compile Include="Commands\Adapters\CheckedToolStripButtonAdapterFactory.cs" />
+    <Compile Include="Commands\Adapters\CheckedToolStripMenuItemAdapter.cs" />
+    <Compile Include="Commands\Adapters\ChekedItemAdapter.cs" />
+    <Compile Include="Commands\Adapters\ToolStripButtonAdapter.cs" />
+    <Compile Include="Commands\Adapters\ToolStripButtonAdapterFactory.cs" />
+    <Compile Include="Commands\Adapters\ToolStripDropDownButtonAdapter.cs" />
+    <Compile Include="Commands\Adapters\ToolStripDropDownButtonAdapterFactory.cs" />
+    <Compile Include="Commands\Adapters\ToolStripMenuItemAdapter.cs" />
+    <Compile Include="Commands\Adapters\ToolStripMenuItemAdapterFactory.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\CommandAdapterBase.cs" />
+    <Compile Include="Commands\CommandAdapterFactoryContainer.cs" />
+    <Compile Include="Commands\CommandHandlerDependency.cs" />
+    <Compile Include="Commands\CommandHolder.cs" />
+    <Compile Include="Commands\CommandInvokerDependency.cs" />
+    <Compile Include="Commands\CommandsSynchronizer.cs" />
+    <Compile Include="Commands\ICommandAdapter.cs" />
+    <Compile Include="Commands\ICommandAdapterFactory.cs" />
+    <Compile Include="Commands\ISynchronizeService.cs" />
+    <Compile Include="Openers\IForm.cs" />
+    <Compile Include="Openers\SimilarFormsOpener.cs" />
+    <Compile Include="Openers\SimilarWIFormsOpener.cs" />
+    <Compile Include="Openers\SingleFormOpener.cs">
+    </Compile>
+    <Compile Include="Openers\SingleWIFormOpener.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Controlling\CommandsAccessibility.cs" />
+    <Compile Include="Controlling\ICommandsAccessibility.cs" />
+    <Compile Include="Controlling\IShellUIController.cs" />
+    <Compile Include="Controlling\IShellUIElementsView.cs" />
+    <Compile Include="Controlling\IShellUIManager.cs" />
+    <Compile Include="Controlling\IShellUIManagerBase.cs" />
+    <Compile Include="Controlling\ItemCommandsAccessibility.cs" />
+    <Compile Include="Controlling\ITypeItem.cs" />
+    <Compile Include="Controlling\MenuPosition.cs" />
+    <Compile Include="Controlling\SelectedItem.cs" />
+    <Compile Include="Controlling\ShellUIControllerBase.cs" />
+    <Compile Include="Settings\ISettingsControlProvider.cs" />
+    <Compile Include="Settings\ISettingsFormService.cs" />
+    <Compile Include="Settings\SettingsControlData.cs" />
+    <Compile Include="Settings\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SettingsFormService.cs" />
+    <Compile Include="WorkItems\IDependency.cs" />
+    <Compile Include="WorkItems\ItemDependency.cs" />
+    <Compile Include="WorkItems\IWorkItemComponent.cs" />
+    <Compile Include="WorkItems\WorkItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\SettingsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gds.Runtime\Gds.Runtime.csproj">
+      <Project>{FE84B6EF-5753-4FCB-A124-E34A45A35AE6}</Project>
+      <Name>Gds.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gds.Windows\Gds.Windows.csproj">
+      <Project>{77F11A5D-F541-444E-846D-3A3919D7A8A4}</Project>
+      <Name>Gds.Windows</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

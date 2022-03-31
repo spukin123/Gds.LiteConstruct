@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77F11A5D-F541-444E-846D-3A3919D7A8A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gds.Windows</RootNamespace>
+    <AssemblyName>Gds.Windows</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusyProcessManager.cs" />
+    <Compile Include="IBusyProcessView.cs" />
+    <Compile Include="ControlUtils.cs" />
+    <Compile Include="DataGridViewGreen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataGridViewGreen.Designer.cs">
+      <DependentUpon>DataGridViewGreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorProviderEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ErrorProviderEx.Designer.cs">
+      <DependentUpon>ErrorProviderEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradientWhitePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GradientWhitePanel.Designer.cs">
+      <DependentUpon>GradientWhitePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradientBluePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GradientBluePanel.Designer.cs">
+      <DependentUpon>GradientBluePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageWindow.cs" />
+    <Compile Include="ModifyingToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ModifyingToolStrip.Designer.cs">
+      <DependentUpon>ModifyingToolStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleBusyProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimpleBusyProcessForm.Designer.cs">
+      <DependentUpon>SimpleBusyProcessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextBoxReadable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TextBoxReadable.Designer.cs">
+      <DependentUpon>TextBoxReadable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSwitcher.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WhiteContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WhiteContainer.Designer.cs">
+      <DependentUpon>WhiteContainer.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleBusyProcessForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SimpleBusyProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GradientBluePanel.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStripButtonDelete.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStripButtonEdit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStripButtonNew.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GradientWhitePanel.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A1316CF-9158-470E-8393-C36AFF06EB7B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gds.LiteConstruct.Presentation</RootNamespace>
+    <AssemblyName>Gds.LiteConstruct.Presentation</AssemblyName>
+    <ApplicationIcon>Resources\OBIcon.ico</ApplicationIcon>
+    <SignManifests>false</SignManifests>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2907.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GeneralAssemblyInfo.cs">
+      <Link>Properties\GeneralAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryPropertiesForm.Designer.cs">
+      <DependentUpon>CategoryPropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColumnSizeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColumnSizeControl.Designer.cs">
+      <DependentUpon>ColumnSizeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Icons.cs" />
+    <Compile Include="ColumnAdditionalControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColumnAdditionalControl.Designer.cs">
+      <DependentUpon>ColumnAdditionalControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationConstants.cs" />
+    <Compile Include="Services\ITextureEditService.cs" />
+    <Compile Include="Services\TextureEditService.cs" />
+    <Compile Include="TexturingCommands.cs" />
+    <Compile Include="PrimitiveAdditionalControlVisitor.cs" />
+    <Compile Include="ScaleEventHandler.cs" />
+    <Compile Include="IPrimitivePropertiesPage.cs" />
+    <Compile Include="Presenters\CameraSwitcherPresenter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presenters\CameraSwitcherPresenter.Designer.cs">
+      <DependentUpon>CameraSwitcherPresenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presenters\GraphicWindowPresenter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presenters\GraphicWindowPresenter.Designer.cs">
+      <DependentUpon>GraphicWindowPresenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenters\PrimitiveManagerPresenter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presenters\PrimitiveManagerPresenter.Designer.cs">
+      <DependentUpon>PrimitiveManagerPresenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenters\PrimitivePropertiesPresenter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presenters\PrimitivePropertiesPresenter.Designer.cs">
+      <DependentUpon>PrimitivePropertiesPresenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenters\TexturingPresenter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presenters\TexturingPresenter.Designer.cs">
+      <DependentUpon>TexturingPresenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrimitiveScaleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PrimitiveScaleControl.Designer.cs">
+      <DependentUpon>PrimitiveScaleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrimitiveSizableControlVisitor.cs" />
+    <Compile Include="Presenters\RenderModeSwitcherController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presenters\RenderModeSwitcherController.Designer.cs">
+      <DependentUpon>RenderModeSwitcherController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SceneSettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\SceneSettingsControl.Designer.cs">
+      <DependentUpon>SceneSettingsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SceneSettingsProvider.cs" />
+    <Compile Include="StairsAdditionalControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StairsAdditionalControl.Designer.cs">
+      <DependentUpon>StairsAdditionalControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StairsSizeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StairsSizeControl.Designer.cs">
+      <DependentUpon>StairsSizeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TexturePreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TexturePreviewForm.Designer.cs">
+      <DependentUpon>TexturePreviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TexturePropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TexturePropertiesForm.Designer.cs">
+      <DependentUpon>TexturePropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrianglePrismSizeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TrianglePrismSizeControl.designer.cs">
+      <DependentUpon>TrianglePrismSizeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParallelepipedSizeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ParallelepipedSizeControl.designer.cs">
+      <DependentUpon>ParallelepipedSizeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrimitivePositionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PrimitivePositionControl.Designer.cs">
+      <DependentUpon>PrimitivePositionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrimitiveRotationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PrimitiveRotationControl.Designer.cs">
+      <DependentUpon>PrimitiveRotationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryPropertiesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CategoryPropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColumnSizeControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ColumnSizeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenters\CameraSwitcherPresenter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CameraSwitcherPresenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenters\GraphicWindowPresenter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GraphicWindowPresenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenters\PrimitiveManagerPresenter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrimitiveManagerPresenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenters\PrimitivePropertiesPresenter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrimitivePropertiesPresenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenters\RenderModeSwitcherController.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RenderModeSwitcherController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenters\TexturingPresenter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TexturingPresenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColumnAdditionalControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ColumnAdditionalControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrimitiveScaleControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrimitiveScaleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\SceneSettingsControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SceneSettingsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StairsAdditionalControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StairsAdditionalControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StairsSizeControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StairsSizeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TexturePreviewForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TexturePreviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TexturePropertiesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TexturePropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrianglePrismSizeControl.resx">
+      <DependentUpon>TrianglePrismSizeControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParallelepipedSizeControl.resx">
+      <DependentUpon>ParallelepipedSizeControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrimitivePositionControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrimitivePositionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrimitiveRotationControl.resx">
+      <DependentUpon>PrimitiveRotationControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OBIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkGrayLine.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stairs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wall_rectangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wall_triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Column.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plane_rectangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plane_triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewObject.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gds.LiteConstruct.BusinessObjects\Gds.LiteConstruct.BusinessObjects.csproj">
+      <Project>{6D2D9F6C-2081-421D-93C7-251C0C0440A0}</Project>
+      <Name>Gds.LiteConstruct.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gds.LiteConstruct.Core\Gds.LiteConstruct.Core.csproj">
+      <Project>{572EFFEA-CB71-4016-B208-4F82914608A0}</Project>
+      <Name>Gds.LiteConstruct.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gds.LiteConstruct.Environment\Gds.LiteConstruct.Environment.csproj">
+      <Project>{D62AE657-DE99-436F-9919-66045E2884B2}</Project>
+      <Name>Gds.LiteConstruct.Environment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gds.LiteConstruct.Rendering\Gds.LiteConstruct.Rendering.csproj">
+      <Project>{DADA31A6-8462-46BC-B898-C64A49DB51AD}</Project>
+      <Name>Gds.LiteConstruct.Rendering</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gds.LiteConstruct.Windows\Gds.LiteConstruct.Windows.csproj">
+      <Project>{E02387FB-5004-4F89-8581-F6C4BFE0F99D}</Project>
+      <Name>Gds.LiteConstruct.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gds.Runtime\Gds.Runtime.csproj">
+      <Project>{FE84B6EF-5753-4FCB-A124-E34A45A35AE6}</Project>
+      <Name>Gds.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gds.Windows\Gds.Windows.csproj">
+      <Project>{77F11A5D-F541-444E-846D-3A3919D7A8A4}</Project>
+      <Name>Gds.Windows</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\GDS.ObjectBuilder.Rendering.SceneCoordinateSystemSettings.datasource" />
+    <None Include="Resources\Fill.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rotate.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteFolder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditFolder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditObject.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewDocument.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewFolder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tick.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteObject.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitApplication.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Move.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MultipleObjects.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preview.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FolderProperties.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ObjectProperties.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bind.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unbind.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MultipleObjects_Star.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
